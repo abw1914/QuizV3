@@ -1,0 +1,195 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/quiz_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="24dp">
+
+
+        <!--Question One-->
+
+        <ImageView
+            android:id="@+id/skyline_pic1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="@dimen/top_margin_each_question"
+            android:src="@drawable/miami" />
+
+        <TextView
+            android:id="@+id/question1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/question1_radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/question1"
+            android:layout_marginTop="20dp">
+
+            <RadioButton
+                android:id="@+id/question1_rb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/question1_choice1" />
+
+            <RadioButton
+                android:id="@+id/question1_rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/question1_choice2" />
+
+            <RadioButton
+                android:id="@+id/question1_rb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/question1_choice3" />
+
+        </RadioGroup>
+
+      <!-- <Button
+            android:id="@+id/scoreQuestion1"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="scoreQuestion1"
+            android:text="Score Question One"
+            android:textSize="12sp"
+            android:layout_gravity="center_horizontal"/>-->
+-->
+        <!--Question Two check boxes-->
+        <TextView
+            android:id="@+id/question2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What is the largest state in the US?"
+            android:layout_gravity="center_horizontal"
+            android:padding="20dp"
+            android:layout_below="@id/question1_radioGroup"/>
+
+        <CheckBox
+            android:id="@+id/question2_cb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Texas"/>
+
+        <CheckBox
+            android:id="@+id/question2_cb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="California"/>
+        <CheckBox
+            android:id="@+id/question2_cb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alaska"/>
+      <!-- <Button
+            android:id="@+id/scoreQuestion2"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="scoreQuestion2"
+            android:text="Score Question Two"
+            android:textSize="12sp"
+            android:layout_gravity="center_horizontal"/>-->
+-->
+        <!--Question Three edit Text-->
+
+        <TextView
+            android:id="@+id/question3_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_gravity="center_horizontal"
+            android:text="What US State get the most annual snow?"/>
+
+        <EditText
+            android:id="@+id/question3_response"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="US State"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"/>
+   <!--     <Button
+            android:id="@+id/scoreQuestion3"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="scoreQuestion3"
+            android:text="Score Question Three"
+            android:textSize="12sp"
+            android:layout_gravity="center_horizontal"/>-->
+
+        <!--Question Four checkbox-->
+        <TextView
+            android:id="@+id/question4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What is the smallest state in the US?"
+            android:layout_gravity="center_horizontal"
+            android:padding="20dp"
+            android:layout_below="@id/question1_radioGroup"/>
+
+        <CheckBox
+            android:id="@+id/question4_cb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rhode Island"/>
+
+        <CheckBox
+            android:id="@+id/question4_cb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Hampshire"/>
+        <CheckBox
+            android:id="@+id/question4_cb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hawaii"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Submit Responses"
+            android:onClick="submitResponses"
+            android:textColorHighlight="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/score"
+            android:padding="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:visibility="invisible"
+            android:text=""/>
+        <TextView
+            android:id="@+id/total_score"
+            android:padding="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="Total Score Message"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">QuizV2</string>
+    <string name="question1">Name this US City Downtown Skyline</string>
+    <string name="question1_choice1">Houston</string>
+    <string name="question1_choice2">New York</string>
+    <string name="question1_choice3">Miami</string>
+</resources>
